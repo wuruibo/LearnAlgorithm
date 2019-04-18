@@ -1,0 +1,33 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+LICENSE
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### clover
+.clover/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### mvn
+mvn*
+.mvn*
+### VS Code ###
+.vscode/
