@@ -3,6 +3,7 @@ package FindSubStringUsingKMP;
 /**
  * 通过kmp算法判断一个字符串中是否存在另一个子串
  * 贴个youtobe大牛的课程
+ * Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search)
  * https://www.youtube.com/watch?v=GTJr8OvyEVQ&feature=youtu.be
  * @autor yeqiaozhu.
  * @date 2019-05-05
