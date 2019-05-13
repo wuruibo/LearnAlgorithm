@@ -1,4 +1,4 @@
-package ReverseLinkedList;
+package LinkedList.ReverseLinkedList;
 
 import AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
@@ -37,6 +37,18 @@ public class ReverseLinkedList {
         return reverse.next;
     }
 
+    public ListNode reverseListOneScanMoreClear(ListNode head){
+
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
+        return prev;
+    }
     /**
      * method 2:一次遍历整个链表
      * @param head
@@ -80,7 +92,13 @@ public class ReverseLinkedList {
             return node;
         }
     }
-
+    public ListNode reverseListTest(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode p = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
+    }
     private void getReverseListNode(ListNode head){
         if(head.next ==null){
             reverseListNode.add(head);
@@ -98,9 +116,9 @@ public class ReverseLinkedList {
     }
     public static void main(String[] args) {
         //递归
-        ListNodeUtils.printListNodes(new ReverseLinkedList().reverseList(ListNodeUtils.createListNode(5,1)));
+        ListNodeUtils.printListNodes(new ReverseLinkedList().reverseListTest(ListNodeUtils.createListNode(2,1)));
         //非递归
-        ListNodeUtils.printListNodes(new ReverseLinkedList().reverseListOneScan(ListNodeUtils.createListNode(5,1)));
+        ListNodeUtils.printListNodes(new ReverseLinkedList().reverseListOneScanMoreClear(ListNodeUtils.createListNode(5,1)));
 
     }
 }
