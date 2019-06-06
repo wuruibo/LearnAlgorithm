@@ -4,7 +4,7 @@ package MeDianTwoSortedArray;
  * @autor yeqiaozhu.
  * @date 2019-05-10
  */
-//todo 用大小堆找两个有序数组的中位数
+//todo 不占用空间
 public class MeDianOfTwoSortedArraysUsingQueue {
 
     /*private final PriorityQueue priorityQueue1 = new PriorityQueue<Integer>((t1, t2) ->
