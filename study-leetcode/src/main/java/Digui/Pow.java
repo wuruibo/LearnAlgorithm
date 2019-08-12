@@ -39,4 +39,5 @@ public class Pow {
         System.out.println(new Pow().myPow(0.00001,
                 2147483647));
     }
+
 }
