@@ -22,15 +22,20 @@ class FooBar {
     public void foo(Runnable printFoo) throws InterruptedException {
         
         for (int i = 0; i < n; i++) {
-            reentrantLock.lock();
-            while (flag ==1){
-                barPrintedCondition.await();
+            try {
+                reentrantLock.lock();
+                while (flag ==1){
+                    barPrintedCondition.await();
+                }
+                // printFoo.run() outputs "foo". Do not change or remove this line.
+                printFoo.run();
+                flag=1;
+                fooPrintedCondition.signalAll();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                reentrantLock.unlock();
             }
-        	// printFoo.run() outputs "foo". Do not change or remove this line.
-        	printFoo.run();
-            flag=1;
-            fooPrintedCondition.signalAll();
-        	reentrantLock.unlock();
         }
     }
 
