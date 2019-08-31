@@ -18,4 +18,7 @@ public class UsingRecursive {
         return sumRange(i,j-1)+nums[j];
     }
 
+    public static void main(String[] args) {
+        while (true);
+    }
 }
