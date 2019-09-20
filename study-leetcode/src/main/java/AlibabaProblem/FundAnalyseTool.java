@@ -1,9 +1,10 @@
 package AlibabaProblem;
 
-import com.google.common.collect.Lists;
+
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,7 +40,7 @@ public class FundAnalyseTool {
     }
 
     public static void main(String[] args) {
-        List<FundNetValue> fundNetValues= Lists.newArrayList();
+        List<FundNetValue> fundNetValues= new ArrayList<>();
         for (int i = 1; i <= 15; i++) {
             FundNetValue fundNetValue=new FundNetValue();
             fundNetValue.setNetValue(new BigDecimal(i));

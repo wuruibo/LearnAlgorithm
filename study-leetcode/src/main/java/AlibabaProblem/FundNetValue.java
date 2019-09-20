@@ -18,6 +18,9 @@ public class FundNetValue {
      */
     private BigDecimal netValue;
 
+    public FundNetValue() {
+    }
+
     public FundNetValue(Date netValueDate, BigDecimal netValue) {
         this.netValueDate = netValueDate;
         this.netValue = netValue;
