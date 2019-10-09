@@ -34,7 +34,7 @@ public class Solution {
         reentrantLock.lockInterruptibly();
         try {
             while (queue.size()==size){
-                notFull.await();
+                notFull.wait();
             }
             queue.add(integer);
             notEmpty.signalAll();
@@ -51,7 +51,7 @@ public class Solution {
 
         try {
             while (queue.size()==0){
-                notEmpty.await();
+                notEmpty.wait();
             }
             queue.remove();
             notFull.signalAll();
