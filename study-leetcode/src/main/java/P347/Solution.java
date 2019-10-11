@@ -19,9 +19,14 @@ class Solution {
             }
         }
 
-        //定义一个比较器
+        /*//定义一个比较器
         Comparator<Map.Entry<Integer,Integer>> comparator=
-                (entry1,entry2)-> entry1.getValue()<entry2.getValue()?-1:1;
+                (entry1,entry2)-> entry1.getValue()-entry2.getValue();
+*/
+        //定义一个比较器  这个操作可以类比上面的函数表达式
+        Comparator<Map.Entry<Integer,Integer>> comparator=
+                Comparator.comparing(Map.Entry<Integer,Integer>::getValue);
+
 
         //构造优先级队列
         PriorityQueue<Map.Entry<Integer,Integer>> priorityQueue=new PriorityQueue<>(
