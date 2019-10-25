@@ -1,7 +1,7 @@
 package P287;
 
 /**
- * 快慢指针法
+ * 快慢指针
  * @autor yeqiaozhu.
  * @date 2019-10-21
  */
@@ -14,11 +14,18 @@ public class UsingFastSlowPointer {
             if(fast == slow)
                 break;
         }
-        return nums[slow];
+        int finder = 0;
+        while(true){
+            finder = nums[finder];
+            slow = nums[slow];
+            if(slow == finder)
+                break;
+        }
+        return slow;
     }
 
     public static void main(String[] args) {
-        int[] ints={1,3,4,2,2};
+        int[] ints={2,1,1};
         new UsingFastSlowPointer().findDuplicate(ints);
     }
 }
