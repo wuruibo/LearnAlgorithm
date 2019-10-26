@@ -26,4 +26,15 @@ public class ListNodeUtils {
             listNode = listNode.next;
         }
     }
+
+    public static ListNode buildWithArray(int[] arrays){
+        ListNode head=new ListNode(0);
+        ListNode current=head;
+        for (int i = 0; i < arrays.length; i++) {
+            ListNode newHead=new ListNode(arrays[i]);
+            current.next=newHead;
+            current=newHead;
+        }
+        return head.next;
+    }
 }
