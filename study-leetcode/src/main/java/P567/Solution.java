@@ -3,6 +3,10 @@ package P567;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * sliding window
+ * begin和end中间的部分为窗口 注意不包括begin和end
+ */
 class Solution {
     public boolean checkInclusion(String s1, String s2) {
         //定义前后窗口
