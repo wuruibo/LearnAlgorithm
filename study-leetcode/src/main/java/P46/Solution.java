@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * 用set去判断是否已经使用过
  * Backing tracking
  */
 class Solution {
@@ -15,10 +16,10 @@ class Solution {
     private List<List<Integer>> result= new ArrayList<>();
     public List<List<Integer>> permute(int[] nums) {
         this.nums=nums;
-        premuteBackTracking(new ArrayList<>(),0);
+        premuteBackTracking(new ArrayList<>());
         return result;
     }
-    public void premuteBackTracking(List<Integer> tempList,int start){
+    public void premuteBackTracking(List<Integer> tempList){
         if (tempList.size()==nums.length) {
             result.add(new ArrayList<>(tempList));
         }
@@ -30,7 +31,7 @@ class Solution {
             }
             tempList.add(nums[i]);
             set.add(nums[i]);
-            premuteBackTracking(tempList,i);
+            premuteBackTracking(tempList);
             tempList.remove(tempList.size()-1);
             set.remove(nums[i]);
         }

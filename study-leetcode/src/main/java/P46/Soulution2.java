@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 直接用数组判断是否已经使用过
  * @autor yeqiaozhu.
  * @date 2019-11-07
  */
@@ -25,5 +26,10 @@ public class Soulution2 {
                 tempList.remove(tempList.size() - 1);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        int[] ints={1,1,2};
+        new Soulution2().permute(ints);
     }
 }
