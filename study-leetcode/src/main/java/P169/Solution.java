@@ -37,5 +37,6 @@ class Solution {
 
         int[] ints2={3};
         System.out.println(new Solution().majorityElement(ints2));
+
     }
 }
