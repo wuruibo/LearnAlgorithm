@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 这里备注下几个字符对应的ascall码
+ * A------->65
+ * a------->97
+ * 0------->48
  * using backtracking
  *
  */
@@ -56,7 +60,7 @@ class Solution {
     public static void main(String[] args) {
         System.out.println(Character.getType('1'));
         Character test=1;
-        System.out.println((char) 50);
+        System.out.println((char) 48);
 
         new Solution().letterCombinations("7");
     }
