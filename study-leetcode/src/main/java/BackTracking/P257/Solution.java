@@ -1,4 +1,4 @@
-package BackTracking;
+package BackTracking.P257;
 
 import java.util.ArrayList;
 import java.util.HashMap;
