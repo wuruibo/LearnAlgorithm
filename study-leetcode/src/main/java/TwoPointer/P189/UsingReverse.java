@@ -1,6 +1,12 @@
 package TwoPointer.P189;
 
 /**
+ * Original List                   : 1 2 3 4 5 6 7
+ * After reversing all numbers     : 7 6 5 4 3 2 1
+ * After reversing first k numbers : 5 6 7 4 3 2 1
+ * After revering last n-k numbers : 5 6 7 1 2 3 4 --> Result
+ *
+ *
  * @autor yeqiaozhu.
  * @date 2019-11-27
  */
