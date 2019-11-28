@@ -23,9 +23,7 @@ class Solution {
         return sum;
     }
     public void dfs(TreeNode root,int temp){
-        if (root==null) {
-            return;
-        }
+
         int next=temp*10+root.val;
         if (root.left==null && root.right==null) {
             //到达叶子节点
