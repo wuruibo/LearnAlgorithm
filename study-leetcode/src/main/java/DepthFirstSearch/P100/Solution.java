@@ -1,7 +1,7 @@
 package DepthFirstSearch.P100;
 
 import CommonUtils.TreeNodeUtils;
-import P104.TreeNode;
+import WaitingCollect.P104.TreeNode;
 
 /**
  * Definition for a binary tree node.

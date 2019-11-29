@@ -2,7 +2,7 @@
 package DepthFirstSearch.P988;
 
 import CommonUtils.TreeNodeUtils;
-import P104.TreeNode;
+import WaitingCollect.P104.TreeNode;
 
 /**
  * 这个是废弃的版本

@@ -1,6 +1,6 @@
 package CommonUtils;
 
-import P104.TreeNode;
+import WaitingCollect.P104.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
