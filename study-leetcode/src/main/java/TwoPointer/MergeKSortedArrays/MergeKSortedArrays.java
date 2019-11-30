@@ -1,7 +1,7 @@
-package MergeKSortedArrays;
+package TwoPointer.MergeKSortedArrays;
+
 
 import AddTwoNumbers.ListNode;
-import AddTwoSortedArrays.AddTwoSortedArrays;
 import CommonUtils.ListNodeUtils;
 
 /**
@@ -20,19 +20,10 @@ public class MergeKSortedArrays {
             if (i == 0) {
                 tempListNode[i] = lists[i];
             } else {
-                tempListNode[i] = new AddTwoSortedArrays().mergeTwoLists(tempListNode[i - 1], lists[i]);
+                //tempListNode[i] = new AddTwoSortedArrays().mergeTwoLists(tempListNode[i - 1], lists[i]);
             }
         }
         return tempListNode[lists.length - 1];
-    }
-
-    //尝试递归
-    private ListNode mergeKListsUsingDigui(ListNode[] lists, int index) {
-        if (index == 1) {
-            return new AddTwoSortedArrays().mergeTwoLists(lists[0], lists[1]);
-        } else {
-            return new AddTwoSortedArrays().mergeTwoLists(mergeKListsUsingDigui(lists, index - 1), lists[index]);
-        }
     }
 
     public static void main(String[] args) {

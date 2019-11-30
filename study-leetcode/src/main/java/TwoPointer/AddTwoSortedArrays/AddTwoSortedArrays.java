@@ -1,4 +1,4 @@
-package AddTwoSortedArrays;
+package TwoPointer.AddTwoSortedArrays;
 
 import AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
@@ -10,7 +10,7 @@ import CommonUtils.ListNodeUtils;
  */
 public class AddTwoSortedArrays {
 
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode indexListNode1=l1;
         ListNode indexListNode2=l2;
         ListNode newListNode=new ListNode(1);
