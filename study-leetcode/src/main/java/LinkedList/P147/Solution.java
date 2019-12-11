@@ -1,6 +1,6 @@
 package LinkedList.P147;
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
 
 /**

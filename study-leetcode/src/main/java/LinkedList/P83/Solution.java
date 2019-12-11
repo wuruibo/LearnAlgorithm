@@ -1,6 +1,6 @@
 package LinkedList.P83;
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
 
 /**

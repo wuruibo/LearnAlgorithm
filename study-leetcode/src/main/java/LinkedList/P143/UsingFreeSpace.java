@@ -1,6 +1,6 @@
 package LinkedList.P143;
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 
 /**
  * step1 找到链表的终点

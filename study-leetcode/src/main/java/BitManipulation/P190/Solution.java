@@ -1,4 +1,4 @@
-package BitManipulation;
+package BitManipulation.P190;
 
 public class Solution {
     // you need treat n as an unsigned value

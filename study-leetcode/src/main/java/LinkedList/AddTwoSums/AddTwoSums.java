@@ -1,4 +1,4 @@
-package AddTwoSums;
+package LinkedList.AddTwoSums;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
 package WaitingCollect.P160;
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

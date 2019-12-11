@@ -1,6 +1,6 @@
 package TwoPointer.AddTwoSortedArrays;
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
 
 /**

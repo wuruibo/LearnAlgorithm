@@ -1,4 +1,4 @@
-package FindLargestArray;
+package DynamicProgramming.FindLargestArray;
 
 /**
  * Dynamic Programming

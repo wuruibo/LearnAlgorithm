@@ -1,4 +1,4 @@
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 
 import java.util.Map;
 import java.util.concurrent.*;

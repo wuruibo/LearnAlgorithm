@@ -1,6 +1,6 @@
 package LinkedList.P143;
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
 
 import java.util.Deque;

@@ -7,7 +7,7 @@ package DepthFirstSearch.P109; /**
  * }
  */
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
 import WaitingCollect.P104.TreeNode;
 

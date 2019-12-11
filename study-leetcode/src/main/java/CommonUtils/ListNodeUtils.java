@@ -1,6 +1,6 @@
 package CommonUtils;
 
-import AddTwoNumbers.ListNode;
+import LinkedList.AddTwoNumbers.ListNode;
 
 /**
  * @autor yeqiaozhu.
