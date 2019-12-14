@@ -1,4 +1,4 @@
-package WaitingCollect.P198;
+package DynamicProgramming.P198;
 
 /**
  * using recursive

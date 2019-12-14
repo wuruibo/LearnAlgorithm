@@ -1,11 +1,11 @@
-package WaitingCollect.P198;
+package DynamicProgramming.P198;
 
 /**
  * 动态规划
  * @autor yeqiaozhu.
  * @date 2019-08-28
  */
-public class UsingDPSolution {
+public class HouseDPSolution {
     public int rob(int[] nums) {
         if(nums.length==0){
             return 0;
@@ -28,6 +28,6 @@ public class UsingDPSolution {
 
     public static void main(String[] args) {
         int[] num={2,7,9,3};
-        System.out.println(new UsingDPSolution().rob(num));
+        System.out.println(new HouseDPSolution().rob(num));
     }
 }
