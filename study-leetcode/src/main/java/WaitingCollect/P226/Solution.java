@@ -1,7 +1,7 @@
 package WaitingCollect.P226;
 
 import CommonUtils.TreeNodeUtils;
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 /**
  * 递归递归

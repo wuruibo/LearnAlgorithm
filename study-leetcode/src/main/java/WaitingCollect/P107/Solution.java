@@ -1,7 +1,7 @@
 package WaitingCollect.P107;
 
 import CommonUtils.TreeNodeUtils;
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;

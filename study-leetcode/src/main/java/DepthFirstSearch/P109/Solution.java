@@ -9,7 +9,7 @@ package DepthFirstSearch.P109; /**
 
 import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 /**
  * Definition for a binary tree node.

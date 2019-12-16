@@ -1,6 +1,6 @@
 package WaitingCollect.P113;
 
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package WaitingCollect.P110;
 
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 /**
  * 判断左右递归子树的差距是不是大于1

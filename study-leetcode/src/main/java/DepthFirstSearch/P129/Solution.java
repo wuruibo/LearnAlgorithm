@@ -1,7 +1,7 @@
 package DepthFirstSearch.P129;
 
 import CommonUtils.TreeNodeUtils;
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 /**
  * 计算可能的所有的结果和

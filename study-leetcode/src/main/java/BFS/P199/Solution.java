@@ -1,7 +1,7 @@
 package BFS.P199;
 
 import CommonUtils.TreeNodeUtils;
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

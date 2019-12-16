@@ -1,7 +1,7 @@
 package WaitingCollect.P98;
 
 import CommonUtils.TreeNodeUtils;
-import WaitingCollect.P104.TreeNode;
+import CommonUtils.TreeNode;
 
 /**
  * Definition for a binary tree node.
