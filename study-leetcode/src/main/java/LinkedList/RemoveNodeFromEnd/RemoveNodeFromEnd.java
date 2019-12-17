@@ -1,4 +1,4 @@
-package RemoveNodeFromEnd;
+package LinkedList.RemoveNodeFromEnd;
 
 import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
@@ -107,10 +107,10 @@ public class RemoveNodeFromEnd {
     }
         public static void main(String[] args) {
        /* ListNode listNode = ListNodeUtils.createListNode(1, 2);
-        ListNodeUtils.printListNodes(new RemoveNodeFromEnd().removeNthFromEnd(listNode, 1));*/
+        ListNodeUtils.printListNodes(new LinkedList.RemoveNodeFromEnd().removeNthFromEnd(listNode, 1));*/
 
         /*ListNode listNode = ListNodeUtils.createListNode(3, 2);
-        ListNodeUtils.printListNodes(new RemoveNodeFromEnd().removeNthFromEndTwo(listNode, 2));*/
+        ListNodeUtils.printListNodes(new LinkedList.RemoveNodeFromEnd().removeNthFromEndTwo(listNode, 2));*/
 
         ListNode listNode = ListNodeUtils.createListNode(1, 2);
         ListNodeUtils.printListNodes(new RemoveNodeFromEnd().removeNthFromEndThree(listNode, 1));
