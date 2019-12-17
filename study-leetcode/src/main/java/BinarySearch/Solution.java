@@ -1,6 +1,7 @@
 package BinarySearch;
 
 /**
+ *  递归二分
  *  二分查找
  */
 class Solution {

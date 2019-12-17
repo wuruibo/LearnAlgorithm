@@ -1,4 +1,4 @@
-package WaitingCollect.P739;
+package Stack.P739;
 
 import java.util.Stack;
 

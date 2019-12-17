@@ -1,4 +1,4 @@
-package WaitingCollect.P1079;
+package BackTracking.P1079;
 
 import java.util.HashSet;
 import java.util.LinkedList;

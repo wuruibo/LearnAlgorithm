@@ -1,4 +1,4 @@
-package WaitingCollect.P739;
+package Stack.P739;
 
 /**
  * 时间复杂度O(N^2)
