@@ -1,4 +1,4 @@
-package AddThreeSums;
+package TwoPointer.AddThreeSums;
 
 import java.util.*;
 
