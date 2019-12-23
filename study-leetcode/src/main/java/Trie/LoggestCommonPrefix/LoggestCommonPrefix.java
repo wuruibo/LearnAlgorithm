@@ -1,4 +1,4 @@
-package LoggestCommonPrefix;
+package Trie.LoggestCommonPrefix;
 
 /**
  * @autor yeqiaozhu.

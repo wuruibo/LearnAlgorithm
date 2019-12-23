@@ -1,4 +1,4 @@
-package LoogestSubstringNoRe;
+package String.LoogestSubstringNoRe;
 
 import java.util.HashSet;
 import java.util.Set;

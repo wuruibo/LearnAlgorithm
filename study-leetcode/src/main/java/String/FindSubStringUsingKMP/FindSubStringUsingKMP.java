@@ -1,4 +1,4 @@
-package FindSubStringUsingKMP;
+package String.FindSubStringUsingKMP;
 
 /**
  * 通过kmp算法判断一个字符串中是否存在另一个子串

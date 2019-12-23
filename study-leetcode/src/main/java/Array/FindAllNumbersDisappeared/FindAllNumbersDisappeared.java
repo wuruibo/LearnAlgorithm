@@ -1,4 +1,4 @@
-package FindAllNumbersDisappeared;
+package Array.FindAllNumbersDisappeared;
 
 import java.util.ArrayList;
 import java.util.List;

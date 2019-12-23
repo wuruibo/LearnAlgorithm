@@ -1,4 +1,4 @@
-package LongestPalindromicSubstring;
+package String.LongestPalindromicSubstring;
 
 /**
  * 定义一个二维数组，booleans[i][j]中i表示子字符串的起点，j表示终点，boolean值记录是否为回文

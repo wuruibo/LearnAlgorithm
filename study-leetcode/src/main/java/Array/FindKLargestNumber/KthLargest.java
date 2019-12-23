@@ -1,4 +1,4 @@
-package FindKLargestNumber;
+package Array.FindKLargestNumber;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
