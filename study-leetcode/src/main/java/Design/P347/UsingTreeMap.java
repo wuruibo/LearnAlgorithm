@@ -1,4 +1,4 @@
-package Design.P146.P347;
+package Design.P347;
 import java.util.*;
 
 /**
