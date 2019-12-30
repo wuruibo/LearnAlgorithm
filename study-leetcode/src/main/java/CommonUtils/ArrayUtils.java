@@ -1,6 +1,8 @@
 package CommonUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * @autor yeqiaozhu.
@@ -21,5 +23,18 @@ public class ArrayUtils<T> {
 
     public void printIntArray(int[] array){
         Arrays.stream(array).forEach(interger-> System.out.println(interger));
+    }
+
+    public List<List<T>> getListFromArray(T[][] arrays){
+        List<List<T>> triangle= new ArrayList<>();
+
+        for (int i = 0; i < arrays.length; i++) {
+            List<T> temp=new ArrayList<>();
+            for (int j = 0; j < arrays[i].length; j++) {
+                temp.add(arrays[i][j]);
+            }
+            triangle.add(temp);
+        }
+        return triangle;
     }
 }
