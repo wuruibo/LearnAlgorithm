@@ -19,6 +19,14 @@ public class TreeNodeUtils {
         }
         return root;
     }
+    public static void preorder(TreeNode root){
+        if (root==null) {
+            return;
+        }
+        System.out.print(root.val+" ");
+        preorder(root.left);
+        preorder(root.right);
+    }
     public static void insertTreeNode(TreeNode root,TreeNode valToInsert){
         if (root.val>valToInsert.val && root.left == null) {
             root.left=valToInsert;
