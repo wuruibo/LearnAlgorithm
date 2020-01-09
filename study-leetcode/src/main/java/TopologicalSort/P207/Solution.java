@@ -1,4 +1,4 @@
-package TopologicalSort;
+package TopologicalSort.P207;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -24,7 +24,7 @@ import java.util.Queue;
  * Output: true
  *
  *
- * 
+ *
  */
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
