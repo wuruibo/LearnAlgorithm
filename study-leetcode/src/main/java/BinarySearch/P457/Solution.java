@@ -34,7 +34,6 @@ class Solution {
 
         return result;
     }
-
     public static void main(String[] args) {
         int[] houses={1,2,3,4};
         int[] tempsures={1,4};
