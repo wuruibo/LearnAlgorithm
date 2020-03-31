@@ -50,7 +50,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().convert("AB",1));
-        System.out.println(new Solution().convert("PAYPALISHIRING",4));
+        while (true);
+
     }
 }
