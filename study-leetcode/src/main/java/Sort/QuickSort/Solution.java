@@ -43,7 +43,7 @@ class Solution {
                 end--;
             }
         }
-        nums[start]=priot;
+        //nums[start]=priot;
         return start;
     }
     private void swap(int[] nums,int from,int to){
@@ -53,7 +53,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        int[] ints={1,2,3,6,5,4,0,11};
+        int[] ints={-1,2,3,6,5,4,0,11,7};
         new Solution().sortColors(ints);
     }
 }

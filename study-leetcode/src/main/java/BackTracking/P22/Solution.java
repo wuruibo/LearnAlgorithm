@@ -15,7 +15,7 @@ class Solution {
     }
     public void generateParenthesisMnes(String str,int n,int m){
         if (n==0 && m==0) {
-            this.result.add(str);
+            System.out.println(str);
             return;
         }
         if (n>0) {
