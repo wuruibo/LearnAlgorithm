@@ -1,4 +1,5 @@
-/target/
+*/target/
+sourcetrail_dependencies/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
