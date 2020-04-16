@@ -29,7 +29,6 @@ public class Solution {
 	}
 
 	private int rightDepth(TreeNode root) {
-		// TODO Auto-generated method stub
 		int dep = 0;
 		while (root != null) {
 			root = root.right;
@@ -39,7 +38,6 @@ public class Solution {
 	}
 
 	private int leftDepth(TreeNode root) {
-		// TODO Auto-generated method stub
 		int dep = 0;
 		while (root != null) {
 			root = root.left;
