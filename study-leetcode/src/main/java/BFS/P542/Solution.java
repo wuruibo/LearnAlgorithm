@@ -41,6 +41,29 @@ import java.util.Queue;
  * The cells are adjacent in only four directions: up, down, left and right.
  */
 public class Solution {
+    public class Pointer{
+        private int value;
+        private int row;
+        private int column;
+
+        public Pointer(int value, int row, int column) {
+            this.value = value;
+            this.row = row;
+            this.column = column;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public int getRow() {
+            return row;
+        }
+
+        public int getColumn() {
+            return column;
+        }
+    }
     public int[][] updateMatrix(int[][] matrix) {
         int m = matrix.length;
         int n = matrix[0].length;
@@ -48,27 +71,43 @@ public class Solution {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (matrix[i][j] == 1) {
-                    Queue<int[]> queue = new LinkedList<>();
-                    int[] root={};
+                    Queue<Pointer> queue = new LinkedList<>();
+                    Pointer pointer=new Pointer(1,i,j);
+                    queue.offer(pointer);
+
+                    int level=0;
+                    while (!queue.isEmpty()){
+                        int size=queue.size();
+                        for (int k = 0; k < size; k++) {
+                            Pointer current=queue.poll();
+
+                            if (current.value==0) {matrix[i][j]=level;queue.clear();break;}
+                            //继续添加节点
+                            int left=current.getColumn()-1;
+                            int right=current.getColumn()+1;
+                            int top=current.getRow()-1;
+                            int bottom=current.getRow()+1;
+                            if (left>=0) queue.offer(new Pointer(matrix[current.getRow()][left], current.getRow(),left));
+                            if (right<n) queue.offer(new Pointer(matrix[current.getRow()][right],current.getRow(),right));
+                            if (top>=0) queue.offer(new Pointer(matrix[top][current.getColumn()],top,current.getColumn()));
+                            if (bottom<m) queue.offer(new Pointer(matrix[bottom][current.getColumn()],bottom,current.getColumn()));
+
+                        }
+                        level++;
+                    }
 
                 }
             }
         }
 
-        int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-
-        while (!queue.isEmpty()) {
-            int[] cell = queue.poll();
-            for (int[] d : dirs) {
-                int r = cell[0] + d[0];
-                int c = cell[1] + d[1];
-                if (r < 0 || r >= m || c < 0 || c >= n ||
-                    matrix[r][c] <= matrix[cell[0]][cell[1]] + 1) continue;
-                queue.add(new int[] {r, c});
-                matrix[r][c] = matrix[cell[0]][cell[1]] + 1;
-            }
-        }
-
         return matrix;
+    }
+
+    public static void main(String[] args) {
+        int[][] test={{0,0,0},
+                {0,1,0},
+                {1,1,1}};
+        new Solution().updateMatrix(test);
+
     }
 }

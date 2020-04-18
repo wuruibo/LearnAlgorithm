@@ -35,7 +35,7 @@ class WordDictionary {
         for (int i = 0; i < word.length(); i++) {
             //当前字符的index 同时获取数组列表
             int index = word.charAt(i) - 'a';
-            TrieNode[] current = temp.getTrieNodes();
+            TrieNode[] current = temp.trieNodes;
 
             //如果当前节点索引的位置为空 那就生成一个 然后将temp置为当前即节点 直到最后的节点 setEnd为true
             if (current[index] == null) {
@@ -43,7 +43,7 @@ class WordDictionary {
             }
             temp = current[index];
         }
-        temp.setEnd(true);
+        temp.isEnd=true;
     }
 
     /**
@@ -60,7 +60,7 @@ class WordDictionary {
         if (word.charAt(index)=='.') {
             //继续backtracking
             for (int i = 0; i < 26; i++) {
-                if (temp.getTrieNodes()[i]!=null && backTracking(word,index+1,temp.getTrieNodes()[i])) {
+                if (temp.trieNodes[i]!=null && backTracking(word,index+1,temp.trieNodes[i])) {
                     //如果子问题返回true 直接返回 返回false继续往后
                     return true;
                 }
@@ -68,7 +68,7 @@ class WordDictionary {
             return false;
         }else {
             //当前位置超长 当前位置无元素直接返回失败
-            return temp.getTrieNodes()[word.charAt(index)-'a']!=null && backTracking(word,index+1,temp.getTrieNodes()[word.charAt(index)-'a']);
+            return temp.trieNodes[word.charAt(index)-'a']!=null && backTracking(word,index+1,temp.trieNodes[word.charAt(index)-'a']);
         }
     }
     /**
@@ -83,7 +83,7 @@ class WordDictionary {
 
         for (int i = 0; i < word.length(); i++) {
             //直接拿到当前位置先匹配一下
-            TrieNode[] current = temp.getTrieNodes();
+            TrieNode[] current = temp.trieNodes;
             //如果当前字符为.要直接跳过
             if (word.charAt(i) == '.') {
                 //当前字符为.并且当前位置的所有节点都为空 表示无路可走
@@ -92,7 +92,7 @@ class WordDictionary {
                 }//最后一位如果是.进行特殊处理
                 else if (i==word.length()-1) {
                     TrieNode virtual=new TrieNode();
-                    virtual.setEnd(true);
+                    virtual.isEnd=true;
                     return virtual;
                 }else {
                     //其他的位置出现.都直接过滤 但是下一个次遍历到非.的位置时需要拿出当前位置所有节点 先存进队列
