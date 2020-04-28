@@ -49,4 +49,21 @@ public class ArrayUtils<T> {
         }
         return start;
     }
+    public String printListArrayString(List<List<T>> list){
+        StringBuilder result=new StringBuilder("[");
+        String text=recursive(list,0,list.size()-1);
+
+        return result.append(text).append("]").toString();
+    }
+    private String recursive(List<List<T>> list,int start,int end){
+        if (start==end) {
+            return "["+list.get(start).get(0)+","+list.get(start).get(1)+"]";
+        }
+        int mid=start+(end-start)/2;
+        String left=recursive(list,start,mid);
+        String right=recursive(list,mid+1,end);
+
+        return left+","+right;
+
+    }
 }
