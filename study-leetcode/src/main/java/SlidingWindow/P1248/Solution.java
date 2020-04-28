@@ -1,5 +1,7 @@
 package SlidingWindow.P1248;
 
+import java.util.Date;
+
 /**
  * Given an array of integers nums and an integer k. A subarray is called nice if there are k odd numbers on it.
  *
@@ -21,23 +23,34 @@ package SlidingWindow.P1248;
  *
  * Input: nums = [2,2,2,1,2,2,1,2,2,2], k = 2
  * Output: 16
+ *
+ *
+ * Constraints:
+ *
+ * 1 <= nums.length <= 50000
+ * 1 <= nums[i] <= 10^5
+ * 1 <= k <= nums.length
  */
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
-        int counter=k,begin=0,end=0;
-
-        while (end<nums.length){
-            int current=nums[end];
-
-            if ((current & 1)==1) {
-                counter--;
+        int n = nums.length;
+        int res = 0, cnt = 0, even = 0;
+        int l = 0, r = 0;
+        while (r < n) {
+            if (cnt<k && (nums[r++]&1)==1) cnt++;
+            if (cnt == k) {
+                even = 1;
+                while ((nums[l++]&1)==0) even++;
+                cnt--;
             }
-            end++;
-
-            while (counter==0){
-
-            }
+            res += even;
         }
-        return 0;
+        return res;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Date().toString());
+        int[] nums={2,2,2,1,2,2,1,2,2,2};
+        System.out.println(new Solution().numberOfSubarrays(nums, 2));
     }
 }
