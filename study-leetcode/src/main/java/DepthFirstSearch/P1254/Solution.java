@@ -66,4 +66,9 @@ class Solution {
 		grid[i][j] = 1;
 		return (isClosedIsland(grid, i - 1, j) & isClosedIsland(grid, i + 1, j) & isClosedIsland(grid, i, j - 1) & isClosedIsland(grid, i, j + 1));
 	}
+
+	public static void main(String[] args) {
+		int[][] test={{1,1,1,1,1,1,1,0},{1,0,0,0,0,1,1,0},{1,0,1,0,1,1,1,0},{1,0,0,0,0,1,0,1},{1,1,1,1,1,1,1,0}};
+		new Solution().closedIsland(test);
+	}
 }
