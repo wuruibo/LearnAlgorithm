@@ -1,7 +1,6 @@
 package BFS.P1302;
 
 import CommonUtils.TreeNode;
-import CommonUtils.TreeNodeUtils;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -40,7 +39,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode treeNode= TreeNodeUtils.stringToTreeNode("[1,2,3,4,5,null,6,7,null,null,null,null,8]");
-        System.out.println(new Solution().deepestLeavesSum(treeNode));
+        /*TreeNode treeNode= TreeNodeUtils.stringToTreeNode("[1,2,3,4,5,null,6,7,null,null,null,null,8]");
+        System.out.println(new Solution().deepestLeavesSum(treeNode));*/
     }
 }

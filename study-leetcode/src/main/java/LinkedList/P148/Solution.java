@@ -1,8 +1,8 @@
 
 package LinkedList.P148;
 
-import LinkedList.AddTwoNumbers.ListNode;
 import CommonUtils.ListNodeUtils;
+import LinkedList.AddTwoNumbers.ListNode;
 
 /**
  * 归并排序
@@ -14,7 +14,6 @@ import CommonUtils.ListNodeUtils;
  * }
  */
 class Solution {
-
     public ListNode sortList(ListNode head) {
         if (head==null ||head.next == null) {
             return head;
