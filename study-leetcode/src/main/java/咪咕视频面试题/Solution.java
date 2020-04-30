@@ -15,11 +15,8 @@ public class Solution {
         return mergeArray(arr1,arr2);
     }
     private int[] mergeSort(int[] input,int start,int end){
-        if (start==end) {
-            int[] result=new int[1];
-            result[0]=input[start];
-            return result;
-        }
+        if (start>end) return new int[0];
+        if (start==end) return new int[]{input[start]};
         int mid=start+((end-start)>>1);
         int[] left=mergeSort(input,start,mid);
         int[] right=mergeSort(input,mid+1,end);
