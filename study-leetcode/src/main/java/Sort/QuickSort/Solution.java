@@ -1,5 +1,7 @@
 package Sort.QuickSort;
 
+import java.util.Arrays;
+
 /**
  *
  * 写一个快排吧
@@ -55,5 +57,6 @@ class Solution {
     public static void main(String[] args) {
         int[] ints={-1,2,3,6,5,4,0,11,7};
         new Solution().sortColors(ints);
+        System.out.println(Arrays.toString(ints));
     }
 }
