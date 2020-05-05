@@ -15,7 +15,7 @@ public class Solution {
         return mergeArray(arr1,arr2);
     }
     private int[] mergeSort(int[] input,int start,int end){
-        if (start>end) return new int[0];
+        if (start>end) return new int[0];//主要是防止输入的数组是{}这种空的情况
         if (start==end) return new int[]{input[start]};
         int mid=start+((end-start)>>1);
         int[] left=mergeSort(input,start,mid);
