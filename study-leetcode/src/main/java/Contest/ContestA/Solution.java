@@ -1,4 +1,4 @@
-package Contest.Contest;
+package Contest.ContestA;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -61,12 +61,12 @@ class Solution {
 
     public static void main(String[] args) {
         int[] test={1,2,3};
-        System.out.println(Arrays.asList(new Contest.Contest.Solution().buildArray(test, 3)));
+        System.out.println(Arrays.asList(new Contest.ContestA.Solution().buildArray(test, 3)));
 
         int[] test1={1,3};
-        System.out.println(Arrays.asList(new Contest.Contest.Solution().buildArray(test1, 3)));
+        System.out.println(Arrays.asList(new Contest.ContestA.Solution().buildArray(test1, 3)));
 
         int[] test2={2,3,4};
-        System.out.println(Arrays.asList(new Contest.Contest.Solution().buildArray(test2, 4)));
+        System.out.println(Arrays.asList(new Contest.ContestA.Solution().buildArray(test2, 4)));
     }
 }
