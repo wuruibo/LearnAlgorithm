@@ -29,6 +29,21 @@ class Solution {
     }
 
     public static void main(String[] args) {
+        List<Map> oldList=new ArrayList<>();
+        Map oldMap=new HashMap<>();
+        oldMap.put(1,2);
+        oldList.add(oldMap);
+
+/*        for (int i = 0; i < 2; i++) {
+            for (Map map : oldList) {
+                Map dst=new HashMap<>();
+                ((ArrayList<Map>) oldList).clone();
+                oldList.add(dst);
+            }
+        }*/
+        List<Map> result=(List<Map>)((ArrayList<Map>) oldList).clone();
+        oldList.addAll(result);
+        System.out.println(oldList.toString());
         int[][] edges={{0,1},{1,2},{0,3}};
         Boolean[] hasApples={true,true,true,true};
         System.out.println(new Solution().minTime(0, edges, Arrays.asList(hasApples)));
