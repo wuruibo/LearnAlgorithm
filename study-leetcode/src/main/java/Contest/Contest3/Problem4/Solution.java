@@ -1,4 +1,4 @@
-package Contest.ContestC.Problem4;
+package Contest.Contest3.Problem4;
 
 import java.util.ArrayList;
 import java.util.HashMap;

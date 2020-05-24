@@ -1,4 +1,4 @@
-package Contest.ContestC.Problem1;
+package Contest.Contest3.Problem1;
 
 
 class Solution {

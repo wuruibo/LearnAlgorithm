@@ -1,4 +1,4 @@
-package Contest.ContestC.Problem2;
+package Contest.Contest3.Problem2;
 
 /**
  * 给你字符串 s 和整数 k 。

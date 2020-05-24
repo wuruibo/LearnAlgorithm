@@ -1,4 +1,4 @@
-package Contest.ContestC.Problem3;
+package Contest.Contest3.Problem3;
 
 import CommonUtils.TreeNode;
 import CommonUtils.TreeNodeUtils;
