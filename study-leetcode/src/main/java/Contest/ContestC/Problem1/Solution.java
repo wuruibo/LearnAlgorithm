@@ -1,14 +1,28 @@
-package Trie;
+package Contest.ContestC.Problem1;
+
+
+class Solution {
+    public int isPrefixOfWord(String sentence, String searchWord) {
+        String[] breaks=sentence.split(" ");
+        Trie trie=new Trie();
+        for (int i = 0; i < breaks.length; i++) {
+            trie.insert(breaks[i],i);
+        }
+        Trie.TrieNode cur=trie.startsWithNode(searchWord);
+        return cur==null?-1:cur.j+1;
+    }
+}
 
 class Trie {
     //定义root节点
     TrieNode root;
-    public static class TrieNode {
+    static class TrieNode {
         //每个node下都保存26个字母的数组，可以直接通过索引搜索到
         TrieNode[] trieNodes;
         //记录当前节点是不是end节点
         boolean isEnd;
-
+        //结束位置的索引
+        int j=Integer.MAX_VALUE;
         private static final int size=26;
 
         public TrieNode() {
@@ -32,9 +46,9 @@ class Trie {
     public Trie() {
         root=new TrieNode();
     }
-    
+
     /** Inserts a word into the trie. */
-    public void insert(String word) {
+    public void insert(String word,int j) {
         //定义当前遍历到的节点位置
         TrieNode temp=root;
         for (int i = 0; i < word.length(); i++) {
@@ -54,18 +68,19 @@ class Trie {
             if (i==word.length()-1) {
                 temp.setEnd(true);
             }
+            temp.j=Math.min(temp.j,j);
         }
     }
-    
+
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
         TrieNode t=startsWithNode(word);
         return t!=null && t.isEnd ;
     }
-    
+
     /** Returns if there is any word in the trie that starts with the given prefix. */
     public boolean startsWith(String prefix) {
-       return startsWithNode(prefix)==null?false:true;
+        return startsWithNode(prefix)==null?false:true;
     }
     /** Returns if there is any word in the trie that starts with the given prefix. */
     public TrieNode startsWithNode(String prefix) {
@@ -83,17 +98,6 @@ class Trie {
             }
         }
         return temp;
-    }
-
-    public static void main(String[] args) {
-        Trie trie = new Trie();
-
-        trie.insert("apple");
-        System.out.println(trie.search("apple"));   // returns true
-        System.out.println(trie.search("app"));    // returns false
-        System.out.println(trie.startsWith("app")); // returns true
-        trie.insert("app");
-        System.out.println(trie.search("app"));   // returns true
     }
 }
 
