@@ -45,61 +45,45 @@ import java.util.List;
  * connections[i][0] != connections[i][1]
  */
 class Solution {
+    //统计
+    private Integer count=0;
     public int minReorder(int n, int[][] connections) {
         //先构造有向图
-        List<List<Integer>> graph= new ArrayList<>(n);
-        List<List<Integer>> src=new ArrayList<>(n);
+        List<List<int[]>> graph= new ArrayList<>(n);
+
         for (int i = 0; i < n; i++) {
             graph.add(new ArrayList<>());
-            src.add(new ArrayList<>());
         }
         for (int[] connection : connections) {
             Integer key=connection[0];
             Integer value=connection[1];
-            List<Integer> dest=graph.get(key);
-            dest.add(value);
-            graph.set(key,dest);
+            List<int[]> esc=graph.get(key);
+            esc.add(new int[]{value,1});
+            graph.set(key,esc);
 
-            List<Integer> oDest=src.get(key);
-            oDest.add(key);
-            src.set(key,oDest);
-        }
-        //反向记录开始的位置
-
-        for (int[] connection : connections) {
-            Integer value=connection[0];
-            Integer key=connection[1];
-            List<Integer> dest=graph.get(key)==null?new ArrayList<>():graph.get(key);
-            dest.add(value);
-            src.set(key,dest);
+            List<int[]> desc=graph.get(value);
+            desc.add(new int[]{key,-1});
+            graph.set(value,desc);
         }
 
         //先通过dfs找到根节点
-        List<Integer> leafs=new ArrayList<>();
-        dfs(leafs,graph,0);
+        dfs(graph,-1,0);
 
         //从根节点往0去走 看需要加多少根线
-        int count=0;
-        for (int i = 0; i < leafs.size(); i++) {
-            Integer leaf=leafs.get(i);
-            if (leaf==0) {
-                break;
-            }else if (graph.get(leaf).size()==0){
-                List<Integer> dest=src.get(leaf);
-                graph.set(leaf,dest);
-                count++;
-            }
-        }
-
         return count;
     }
-    private void  dfs(List<Integer> leafs,List<List<Integer>> graph,Integer root){
-        if (graph.get(root).size()==0) {
-            leafs.add(root);
-            return;
-        }
-        for (int i = 0; i < graph.get(root).size(); i++) {
-            dfs(leafs,graph,graph.get(root).get(i));
+    private void  dfs(List<List<int[]>> graph,Integer parent,Integer root){
+        List<int[]> sons=graph.get(root);
+        for (int i = 0; i < sons.size(); i++) {
+            int[] son=sons.get(i);
+            if (parent!=son[0]) {
+                if (son[1]==1) {
+                    System.out.print(root+" "+son[0]);
+                    System.out.println();
+                    count++;
+                }
+                dfs(graph,root,son[0]);
+            }
         }
     }
 
