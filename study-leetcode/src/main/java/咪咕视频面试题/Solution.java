@@ -20,6 +20,7 @@ public class Solution {
         int mid=start+((end-start)>>1);
         int[] left=mergeSort(input,start,mid);
         int[] right=mergeSort(input,mid+1,end);
+
         return mergeArray(left,right);
     }
     private int[] mergeArray(int[] arr1,int[] arr2){
@@ -45,5 +46,6 @@ public class Solution {
         int[] test1={};
         int[] test2={2,1,6,8};
         new Solution().sortMergeArray(test1,test2);
+
     }
 }
