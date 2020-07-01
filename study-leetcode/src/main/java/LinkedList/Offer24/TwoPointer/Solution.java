@@ -26,6 +26,9 @@ class Solution {
 
     public static void main(String[] args) {
         ListNode listNode= ListNodeUtils.buildWithArray(new int[]{1,2,3,4,5});
+        String a="A-00-9000";
+        String c=a.replaceAll("-","");
+        System.out.println(c);
         new Solution().reverseList(listNode);
     }
 }
