@@ -1,4 +1,4 @@
-package Greedy.P452.P1221;
+package Greedy.P1221;
 
 /**
  * Balanced strings are those who have equal quantity of 'L' and 'R' characters.

@@ -1,4 +1,4 @@
-package Greedy.P452.P763;
+package Greedy.P763;
 
 import java.util.ArrayList;
 import java.util.List;

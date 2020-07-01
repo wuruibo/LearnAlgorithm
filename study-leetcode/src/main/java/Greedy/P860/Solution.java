@@ -1,4 +1,4 @@
-package Greedy.P452.P860;
+package Greedy.P860;
 
 import java.util.List;
 
