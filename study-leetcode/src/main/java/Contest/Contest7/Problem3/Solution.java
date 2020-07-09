@@ -1,5 +1,8 @@
 package Contest.Contest7.Problem3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 给你一个只包含 0 和 1 的 rows * columns 矩阵 mat ，请你返回有多少个 子矩形 的元素全部都是 1 。
  *
@@ -69,6 +72,9 @@ class Solution {
     }
 
     public static void main(String[] args) {
+        List<Integer> list= new ArrayList<>();
+        list.add(1);
+        System.out.println(list.subList(0, 1));
         System.out.println(new Solution().numSubmat(new int[][]{{1, 0, 1}, {1, 1, 0}, {1, 1, 0}}));
         System.out.println(new Solution().numSubmat(new int[][]{{0,0,0},{0,0,0},{0,1,1},{1,1,0},{0,1,1}}));
         System.out.println(new Solution().numSubmat(new int[][]{{0,1,1,0}, {0,1,1,1}, {1,1,1,0}}));
