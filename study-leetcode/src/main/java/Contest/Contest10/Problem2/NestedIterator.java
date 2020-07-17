@@ -35,7 +35,7 @@ public class NestedIterator implements Iterator<Integer> {
         }
         for (int i = 0; i < nestedList.size(); i++) {
             recursive(nestedList.get(i).getList());
-            result.add(nestedList.get(i));
+            result.add(nestedList.get(i).getInteger());
         }
     }
 
