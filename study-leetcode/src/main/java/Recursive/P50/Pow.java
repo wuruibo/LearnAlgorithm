@@ -1,4 +1,4 @@
-package Recursive;
+package Recursive.P50;
 
 /**
  * @autor yeqiaozhu.
