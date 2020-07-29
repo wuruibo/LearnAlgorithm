@@ -2,6 +2,7 @@ package String.FindSubStringUsingKMP;
 
 /**
  * 通过kmp算法判断一个字符串中是否存在另一个子串
+ * 字符串完全匹配
  * 贴个youtobe大牛的课程
  * Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search)
  * https://www.youtube.com/watch?v=GTJr8OvyEVQ&feature=youtu.be
