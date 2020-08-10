@@ -12,7 +12,9 @@ public class Solution {
             char ch = s.charAt(i);
             if (ch >= '0' && ch <= '9') {
                 int start = i;
-                while (s.charAt(i + 1) >= '0' && s.charAt(i + 1) <= '9') i++;
+                while (s.charAt(i + 1) >= '0' && s.charAt(i + 1) <= '9') {
+                    i++;
+                }
                 count.push(Integer.parseInt(s.substring(start, i + 1)));
             } else if (ch == '[') {
                 result.push("");
