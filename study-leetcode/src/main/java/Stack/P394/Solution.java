@@ -2,6 +2,10 @@ package Stack.P394;
 
 import java.util.Stack;
 
+/**
+ * 数字存放在数字栈，字符串存放在字符串栈，遇到右括号时候弹出一个数字栈，字母栈弹到左括号为止。就是逆波兰式那种题。
+ * @author yeqiaozhu
+ */
 public class Solution {
     public String decodeString(String s) {
         Stack<Integer> count = new Stack<>();
