@@ -66,4 +66,9 @@ public class ArrayUtils<T> {
         return left+","+right;
 
     }
+    public static void swap(int[] t,int left,int right){
+        int temp=t[left];
+        t[left]=t[right];
+        t[right]=temp;
+    }
 }
