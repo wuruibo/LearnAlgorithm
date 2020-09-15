@@ -51,6 +51,21 @@ class Solution {
         return result[size-1];
     }
 
+    public int numberOfArithmeticSlicesMoreClear(int[] A) {
+        int result=0;
+        //dp[i]代表以i结尾的符合要求的等差数列有多少个
+        int[] dp=new int[A.length];
+        for (int i = 0; i < A.length; i++) {
+            if (i<2){
+                dp[i]=0;
+            }else if (A[i]-A[i-1]==A[i-1]-A[i-2]) {
+                dp[i]=dp[i-1]+1;
+            }
+            result+=dp[i];
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] A={1, 3, 5, 7, 9};
         int[] A1={7, 7, 7, 7};
@@ -60,5 +75,10 @@ class Solution {
         System.out.println(new Solution().numberOfArithmeticSlices(A1));
         System.out.println(new Solution().numberOfArithmeticSlices(A2));
         System.out.println(new Solution().numberOfArithmeticSlices(A3));
+
+        System.out.println(new Solution().numberOfArithmeticSlicesMoreClear(A));
+        System.out.println(new Solution().numberOfArithmeticSlicesMoreClear(A1));
+        System.out.println(new Solution().numberOfArithmeticSlicesMoreClear(A2));
+        System.out.println(new Solution().numberOfArithmeticSlicesMoreClear(A3));
     }
 }
