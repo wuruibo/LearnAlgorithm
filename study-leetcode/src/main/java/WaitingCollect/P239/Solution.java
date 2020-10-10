@@ -13,19 +13,17 @@ class Solution {
         int[] result=new int[nums.length-k+1];
         //定义优先级队列
         Comparator<Integer> comparator=(integer1,integer2)->{
-            if (integer1==integer2) {
+            if (integer1.equals(integer2)) {
                 return 0;
             }
             return integer1<integer2?1:-1;
         };
         Queue<Integer> queue=new PriorityQueue<>(comparator);
         for (int i = 0; i < nums.length; i++) {
-            if (i<k) {
-                queue.add(nums[i]);
-            }else {
-                queue.remove(nums[i-k]);
-                queue.add(nums[i]);
+            if (i >= k) {
+                queue.remove(nums[i - k]);
             }
+            queue.add(nums[i]);
             //优先级队列满的情况下取第一个
             if (queue.size()>=k) {
                 result[i-k+1]=queue.peek();
