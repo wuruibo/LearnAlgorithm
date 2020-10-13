@@ -1,5 +1,8 @@
 package DynamicProgramming.P516;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 最长回文子序列
  *
@@ -39,5 +42,11 @@ class Solution {
             }
         }
         return f[0][n - 1];
+    }
+
+    public static void main(String[] args) {
+        Map<String,Object> map= new HashMap<>();
+        map.put("success",false);
+        System.out.println(Boolean.FALSE.equals(map.get("success")));
     }
 }
