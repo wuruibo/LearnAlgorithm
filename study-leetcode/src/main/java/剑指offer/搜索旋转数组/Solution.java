@@ -18,10 +18,11 @@ class Solution {
         if (right == -1) {
             return -1;
         }
-        while (left < right) {                                         // 循环结束条件left==right
+        // 循环结束条件left==right
+        while (left < right) {
             int mid = left + (right - left) / 2;
-            if (arr[left] < arr[mid]) {                              // 如果左值小于中值，说明左边区间升序               
-                if (arr[left] <= target && target <= arr[mid]) {     // 如果目标在左边的升序区间中，右边界移动到mid
+            if (arr[left] < arr[mid]) {                                 // 如果左值小于中值，说明左边区间升序
+                if (arr[left] <= target && target <= arr[mid]) {        // 如果目标在左边的升序区间中，右边界移动到mid
                     right = mid;
                 } else {                                               // 否则目标在右半边，左边界移动到mid+1
                     left = mid + 1;
