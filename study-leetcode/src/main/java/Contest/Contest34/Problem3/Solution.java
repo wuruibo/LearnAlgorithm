@@ -32,8 +32,8 @@ class Solution {
         // dp[i-1][j] = dp[i-2][j] + (dp[0][j-1] + ... + dp[i-2][j-1])     ----Eq. 2
         // 0 = dp[i-2][j] + (dp[0][j-1] + ... + dp[i-2][j-1]) - dp[i-1][j] ----Eq. 2*
         // dp[i][j] = 2 * dp[i-1][j] + dp[i-1][j-1] - dp[i-2][j]           ----Eq. (1 - 2*)
-        int[][] dp=new int[1000][1000];
-        int mod = 1000000007 + 7;
+        long[][] dp= new long[1000][1000];
+        int mod = 1000000007;
         for(int i = 0;i < n;++i) {
             for(int j = 0;j < k + 1;++j) {
                 if (j==0) {
@@ -48,7 +48,7 @@ class Solution {
                 dp[i][j] %= mod;
             }
         }
-        return (dp[n-1][k] + mod) % mod;
+        return (int)((dp[n-1][k] + mod) % mod);
     }
 
     public static void main(String[] args) {
