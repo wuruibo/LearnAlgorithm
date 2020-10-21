@@ -1,0 +1,51 @@
+package Sort.P406;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * 假设有打乱顺序的一群人站成一个队列。 每个人由一个整数对(h, k)表示，其中h是这个人的身高，k是排在这个人前面且身高大于或等于h的人数。 编写一个算法来重建这个队列。
+ *
+ * 注意：
+ * 总人数少于1100人。
+ *
+ * 示例
+ *
+ * 输入:
+ * [[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
+ *
+ * 输出:
+ * [[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]
+ *
+ */
+class Solution {
+    public int[][] reconstructQueue(int[][] people) {
+        Arrays.sort(people,(p1,p2)->p1[0]!=p2[0]?p2[0]-p1[0]:p1[1]-p2[1]);
+        for (int i = 0; i < people.length; i++) {
+            int[] current=people[i];
+            int index=current[1];
+            //往后面移1位 index->i-1的部分复制到index->i部分
+            int count=i-1;
+            while (count >= index) {
+                people[count+1]=people[count];
+                count--;
+            }
+            //腾出的位置放i位置的元素
+            people[index]=current;
+        }
+        return people;
+    }
+    public int[][] reconstructQueueLinkedList(int[][] people) {
+        Arrays.sort(people,(p1,p2)->p1[0]!=p2[0]?p2[0]-p1[0]:p1[1]-p2[1]);
+        List<int[]> list= new LinkedList<>();
+        for (int[] person : people) {
+            list.add(person[1],person);
+        }
+        return list.toArray(new int[people.length][2]);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Solution().reconstructQueue(new int[][]{{7, 0}, {4, 4}, {7, 1}, {5, 0}, {6, 1}, {5, 2}}));
+    }
+}
