@@ -6,6 +6,8 @@ package String.FindSubStringUsingKMP;
  * 贴个youtobe大牛的课程
  * Knuth–Morris–Pratt(KMP) Pattern Matching(Substring search)
  * https://www.youtube.com/watch?v=GTJr8OvyEVQ&feature=youtu.be
+ *
+ * @author yqz
  * @autor yeqiaozhu.
  * @date 2019-05-05
  */
