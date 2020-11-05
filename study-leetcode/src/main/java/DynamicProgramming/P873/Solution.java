@@ -1,5 +1,8 @@
 package DynamicProgramming.P873;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Example 1:
  *
@@ -16,22 +19,32 @@ package DynamicProgramming.P873;
  * [1,11,12], [3,11,14] or [7,11,18].
  */
 class Solution {
+    /**
+     *  dp[i][j]: 以A[i],A[j] 结尾的最长的长度-2
+     *  如果存在A[k]=A[j]-A[i] 且k<i 则 dp[i][j]=dp[k][i]+1
+     * @param A
+     * @return
+     */
     public int lenLongestFibSubseq(int[] A) {
-        int[] dp=new int[A.length];
-        int[] temp=new int[A.length];
-        temp[0]=0;temp[1]=0;
-        dp[0]=0;dp[1]=0;
-        for (int i = 2; i < A.length; i++) {
-            if (A[i]==(A[i-1]+A[i-2])) {
-                int tempMax=temp[i-1]==0?3:temp[i-1]+1;
-                temp[i]=tempMax;
-                dp[i]=Math.max(tempMax,dp[i-1]);
-            }else {
-                temp[i]=0;
-                dp[i]=dp[i-1];
+        int[][] dp = new int[A.length - 1][A.length];
+        int maxLen=0;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < A.length; i++) {
+            map.put(A[i], i);
+        }
+
+
+        for (int i = 1; i < A.length - 1; i++) {
+            for (int j = i+1; j < A.length; j++) {
+                int stepLen = A[j] - A[i];//A[k]
+                if (map.containsKey(stepLen) && map.get(stepLen) < i) {
+                    int k=map.get(stepLen);
+                    dp[i][j] =  dp[k][i] + 1;
+                    maxLen = Math.max(maxLen, dp[i][j]+2);
+                }
             }
         }
-        return dp[A.length-1];
+        return maxLen;
     }
 
     public static void main(String[] args) {
