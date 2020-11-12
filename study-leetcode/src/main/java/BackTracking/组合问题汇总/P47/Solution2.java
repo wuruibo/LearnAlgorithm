@@ -1,4 +1,4 @@
-package BackTracking.P47;
+package BackTracking.组合问题汇总.P47;
 
 import java.util.ArrayList;
 import java.util.Arrays;

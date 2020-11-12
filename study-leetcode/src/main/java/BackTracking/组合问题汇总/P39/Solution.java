@@ -1,5 +1,5 @@
 
-package BackTracking.P39;
+package BackTracking.组合问题汇总.P39;
 
 
 import java.util.ArrayList;

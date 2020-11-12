@@ -1,5 +1,5 @@
 
-package BackTracking.P79;
+package BackTracking.组合问题汇总.P79;
 
 /**
  * using backtracking
