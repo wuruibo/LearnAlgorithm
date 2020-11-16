@@ -60,8 +60,9 @@ class Solution {
         int[][] dp = new int[word2.length()+1][word1.length()+1];
         for(int i = 0; i <= word2.length(); i++) {
             for(int j = 0; j <= word1.length(); j++) {
-                if(i == 0 && j == 0) dp[i][j] = 0; // no strings given
-                else if(i == 0 && j != 0) {
+                if(i == 0 && j == 0) {
+                    dp[i][j] = 0; // no strings given
+                } else if(i == 0 && j != 0) {
                     dp[i][j] = j; // word2 is empty
                 } else if(i != 0 && j == 0) {
                     dp[i][j] = i; // word1 is empty
