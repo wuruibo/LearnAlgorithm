@@ -1,5 +1,9 @@
 package Array.P48;
 
+/**
+ * 1.先把下面的对折上去
+ * 2.再沿着对角线进行对折
+ */
 class Solution {
     private int[][] matrix;
     public void rotate(int[][] matrix) {
