@@ -1,4 +1,4 @@
-package 仙仙计算;
+package 解题群.仙仙计算;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

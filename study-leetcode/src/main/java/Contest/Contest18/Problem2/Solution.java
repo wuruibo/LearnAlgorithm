@@ -1,7 +1,7 @@
 package Contest.Contest18.Problem2;
 
 /**
- * 灯泡开关 IV
+ * 解题群.灯泡开关 IV
  *
  * 初始的开灯情况是{0,0,0,0,0}全黑 假设target为{1,0,1,0,0}
  * 碰到i=0位置 0!=1开灯 {1,1,1,1,1} current=1;
