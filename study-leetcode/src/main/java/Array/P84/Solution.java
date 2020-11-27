@@ -39,4 +39,9 @@ class Solution {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        //System.out.println(new Solution().largestRectangleArea(new int[]{3, 1, 3, 2, 2}));
+        System.out.println(new Solution().largestRectangleArea(new int[]{1,1}));
+    }
 }
