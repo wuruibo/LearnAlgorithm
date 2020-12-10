@@ -1,7 +1,8 @@
 package Stack.P315;
 
-import java.util.LinkedList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 输入：nums = [5,2,6,1]
@@ -14,18 +15,38 @@ import java.util.List;
  *
  */
 class Solution {
+    private int[] result;
     public List<Integer> countSmaller(int[] nums) {
-        List<Integer> result=new LinkedList<>();
-        for (int i = nums.length - 1; i >= 0; i--) {
-            int count=0;
-            for (int j = i; j < nums.length; j++) {
-                if (nums[i]>nums[j]) {
-                    count++;
+        result=new int[nums.length];
+        mergeSort(nums,0,nums.length-1);
+        return Arrays.stream(result).boxed().collect(Collectors.toList());
+    }
+    private int[] mergeSort(int[] nums,int start,int end){
+        if (start>=end) {
+            return start>end?new int[]{}:new int[]{start};
+        }
+        int mid=start+((end-start)/2);
+        int[] left=mergeSort(nums,start,mid);
+        int[] right=mergeSort(nums,mid+1,end);
+
+        int l=0,r=0;
+        int[] temp=new int[left.length+right.length];
+        while (left.length > l || right.length > r) {
+            if (left.length==l) {
+                temp[l+r]=right[r++];
+            }else if (right.length==r){
+                result[left[l]]+=r;
+                temp[l+r]=left[l++];
+            }else {
+                if (nums[right[r]]<nums[left[l]]) {
+                    temp[l+r]=right[r++];
+                }else {
+                    result[left[l]]+=r;
+                    temp[l+r]=left[l++];
                 }
             }
-            result.add(0,count);
         }
-        return result;
+        return temp;
     }
 
     public static void main(String[] args) {
