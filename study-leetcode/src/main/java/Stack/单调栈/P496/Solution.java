@@ -1,4 +1,4 @@
-package Stack.P496;
+package Stack.单调栈.P496;
 
 import CommonUtils.StackUtils;
 

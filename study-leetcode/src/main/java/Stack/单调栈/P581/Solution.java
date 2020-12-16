@@ -1,4 +1,4 @@
-package WaitingCollect.P581;
+package Stack.单调栈.P581;
 
 /**
  * 这道题解决的是最长递增子序列

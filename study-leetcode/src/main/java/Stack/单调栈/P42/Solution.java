@@ -1,4 +1,4 @@
-package TwoPointer.P42;
+package Stack.单调栈.P42;
 
 /**
  * Example:
