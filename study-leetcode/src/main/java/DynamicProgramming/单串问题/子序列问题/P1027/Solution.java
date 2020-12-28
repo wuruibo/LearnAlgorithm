@@ -1,4 +1,4 @@
-package DynamicProgramming.子序列问题.P1027;
+package DynamicProgramming.单串问题.子序列问题.P1027;
 
 import java.util.HashMap;
 import java.util.Map;

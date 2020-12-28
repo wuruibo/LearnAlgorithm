@@ -1,4 +1,4 @@
-package DynamicProgramming.子序列问题.P873;
+package DynamicProgramming.单串问题.子序列问题.P873;
 
 import java.util.HashMap;
 import java.util.Map;
