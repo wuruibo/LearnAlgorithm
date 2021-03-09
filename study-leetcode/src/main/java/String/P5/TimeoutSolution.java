@@ -1,4 +1,4 @@
-package String.LongestPalindromicSubstring;
+package String.P5;
 
 /**
  *

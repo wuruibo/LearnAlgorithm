@@ -1,13 +1,10 @@
-package String.LongestPalindromicSubstring;
+package String.P5;
 
 /**
  * 定义一个二维数组，booleans[i][j]中i表示子字符串的起点，j表示终点，boolean值记录是否为回文
  * 最大回文子串
  */
 public class LongestPalindromicSubstring {
-
-
-
     public String longestPalindrome(String s) {
         if(s ==null || s.length() ==0){
             return "";
