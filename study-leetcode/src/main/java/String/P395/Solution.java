@@ -26,7 +26,9 @@ package String.P395;
 class Solution {
     public int longestSubstring(String s, int k) {
         int[] hashArray=new int[26];
-        for (int i = 0; i < s.length(); i++) hashArray[s.charAt(i) - 'a']++;
+        for (int i = 0; i < s.length(); i++) {
+            hashArray[s.charAt(i) - 'a']++;
+        }
 
         for (int i = 0; i < s.length(); i++) {
             int index=s.charAt(i)-'a';

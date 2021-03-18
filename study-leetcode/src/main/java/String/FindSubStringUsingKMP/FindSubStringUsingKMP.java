@@ -41,7 +41,9 @@ public class FindSubStringUsingKMP {
                 }
             }
         }
-
+/*        for (int i = 0; i < indexs.length; i++) {
+            System.out.print(indexs[i]);
+        }*/
         //step2 通过生成的pattern的index数组辅助匹配子串是否在父串中存在
         for(int i=0,j=0;i<text.length();i++){
             //匹配到不相等的情况 1.如果j已经是0的话那就i++ 2.如果j不是0的话就j继续回溯根据index数组
@@ -62,6 +64,6 @@ public class FindSubStringUsingKMP {
     }
 
     public static void main(String[] args) {
-        System.out.println(new FindSubStringUsingKMP().subStringIs("abcc","abc"));
+        System.out.println(new FindSubStringUsingKMP().subStringIs("ababcaababcaabc" ,"ababcaabc"));
     }
 }
