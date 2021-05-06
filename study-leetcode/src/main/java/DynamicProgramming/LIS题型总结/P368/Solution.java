@@ -1,4 +1,4 @@
-package DynamicProgramming.P368;
+package DynamicProgramming.LIS题型总结.P368;
 
 import java.util.ArrayList;
 import java.util.Arrays;
