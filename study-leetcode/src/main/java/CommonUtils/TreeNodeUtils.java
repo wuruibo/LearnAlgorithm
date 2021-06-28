@@ -92,6 +92,9 @@ public class TreeNodeUtils {
 
 
     public static void main(String[] args) {
+        System.out.println(3&(~3+1));
+        System.out.println(4&(~4+1));
+        System.out.println(5&(~5+1));
         int[] ints={3,9,20,15,7};
         TreeNodeUtils.buildTreeNodeUsingArray(ints);
     }

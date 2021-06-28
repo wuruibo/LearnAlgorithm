@@ -1,5 +1,14 @@
 package DynamicProgramming.P264;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Arrays;
+import java.util.Comparator;
+
+/**
+ * 这篇题解还比较赞
+ * https://leetcode-cn.com/problems/ugly-number-ii/solution/bao-li-you-xian-dui-lie-xiao-ding-dui-dong-tai-gui/
+ */
 class Solution {
     public int nthUglyNumber(int n) {
         if (n <= 0) {
@@ -22,6 +31,27 @@ class Solution {
                 id5 += 1;
             }
         }
+
         return dp[n - 1];
+    }
+
+    public static void main(String[] args) {
+
+        int[][] array={{0,1},{0,-1}};
+        String s="aest";
+        int i = s.charAt(0);
+        System.out.println(i);
+        Arrays.sort(array,Comparator.comparingInt(a->a[0]));
+        System.out.println(Math.ceil(1.2));
+        double result=0.0;
+        BigDecimal bg = new BigDecimal(result).setScale(2, RoundingMode.UP);
+        System.out.println(bg.doubleValue() <= 1.0);
+    }
+    private long transfer(String word){
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<word.length();i++){
+            res.append(word.charAt(i));
+        }
+        return 0;
     }
 }

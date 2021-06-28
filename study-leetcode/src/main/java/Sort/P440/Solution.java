@@ -50,6 +50,6 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().findKthNumber(13, 2));
+        System.out.println(new Solution().findKthNumber(13, 5));
     }
 }

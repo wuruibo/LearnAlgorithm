@@ -1,5 +1,6 @@
 package Stack.单调栈.P84;
 
+import java.math.BigDecimal;
 import java.util.Stack;
 
 /**
@@ -41,7 +42,10 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        //System.out.println(new Solution().largestRectangleArea(new int[]{3, 1, 3, 2, 2}));
+        BigDecimal test=new BigDecimal(0.0060000);
+        System.out.println(test.doubleValue());
+        Stack<Object> objects = new Stack<>();
+        System.out.println(new Solution().largestRectangleArea(new int[]{2, 5, 4, 2, 4,5,3,1,2,4}));
         System.out.println(new Solution().largestRectangleArea(new int[]{1,1}));
     }
 }

@@ -1,8 +1,7 @@
 package Heap.P692;
 
-import org.omg.CORBA.MARSHAL;
-
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Given a non-empty list of words, return the k most frequent elements.
@@ -27,29 +26,31 @@ import java.util.*;
  */
 class Solution {
     public List<String> topKFrequent(String[] words, int k) {
-        Map<String,Integer> wordsMap=new HashMap<>();
-        for (String word : words) wordsMap.put(word,wordsMap.getOrDefault(word,0)+1);
+        Map<String, Long> wordsMap = Arrays.stream(words).collect(Collectors.groupingBy(String::toString,Collectors.counting()));
+        PriorityQueue<String> priorityQueue= new PriorityQueue<>((word1,word2)->{
+            Long count1=wordsMap.getOrDefault(word1,0L);
+            Long count2=wordsMap.getOrDefault(word2,0L);
+            return count1.equals(count2)?word2.compareTo(word1):count1.compareTo(count2);
+        });
 
-        PriorityQueue<Map.Entry<String,Integer>> priorityQueue= new PriorityQueue<>((a,b)->a.getValue().equals(b.getValue())?
-                b.getKey().compareTo(a.getKey()):a.getValue()-b.getValue());
-
-        for (Map.Entry<String, Integer> entry : wordsMap.entrySet()) {
-            priorityQueue.offer(entry);
-            if (priorityQueue.size()>k) priorityQueue.poll();
+        wordsMap.forEach((word,count)->{
+            priorityQueue.offer(word);
+            if(priorityQueue.size()>k){
+                priorityQueue.poll();
+            }
+        });
+        List<String> result = new ArrayList<>();
+        while(priorityQueue.size() > 0){
+            result.add(priorityQueue.poll());
         }
-        List<String> result=new ArrayList<>();
-        while (!priorityQueue.isEmpty()) {
-            result.add(0,priorityQueue.poll().getKey());
-        }
+        Collections.reverse(result);
         return result;
     }
-
     public static void main(String[] args) {
         String[] words={"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"};
-        new Solution().topKFrequent(words,4);
+        new Solution().topKFrequent(words,5);
 
         Integer[] array={2,1,3};
-        Arrays.sort(array, (a,b)->a-b);
         Arrays.sort(array, (a,b)->b-a);
     }
 }
